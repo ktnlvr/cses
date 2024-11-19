@@ -10,7 +10,7 @@ int main(void) {
         cin >> x >> y;
         long diag = max(x, y) - 1;
         long diagonal = 1 + diag * (diag + 1);
-        long fac = (diag % 2 ? -1 : 1) * (y < x ? -1 : 1);
-        cout << fac * (max(x, y) - min(x, y)) + diagonal << endl;
+        long fac = diag % 2 ? -1 : 1;
+        cout << fac * (y - x) + diagonal << endl;
     }
 }
